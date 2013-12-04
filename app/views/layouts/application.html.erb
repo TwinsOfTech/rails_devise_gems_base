@@ -8,6 +8,16 @@
 </head>
 <body>
 
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<% if signed_in? %>
+  <%= current_user.username %>
+<% else %>
+  Not logged in
+<% end %>
+<hr>
+
 <%= yield %>
 
 </body>
